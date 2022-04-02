@@ -8,6 +8,7 @@ Console.Clear();
 string[] frstArry = { "abcd", "xyz", "tttt", "$$$", "1234",
                       "@@@", "333", "1234", "111", "abcd",
                       "137", "77", "187" };
+string[] scndArry;
 int count = 0;
 int length = 0;
 
@@ -17,7 +18,7 @@ foreach (string elmnt in frstArry)
         length++;
 }
 
-string[] scndArry = new string[length];
+scndArry = new string[length];
 
 for (int j = 0; j < frstArry.Length; j++)
 {
