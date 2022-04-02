@@ -25,8 +25,8 @@ for (int j = 0; j < frstArry.Length; j++)
     if (frstArry[j].Length <= 3)
     {
         scndArry[count] = frstArry[j];
-        count++;
-        Console.Write($"\t{count - 1} ");
+        Console.Write($"\t{count} ");
+        count++;   
     }
 }
 
