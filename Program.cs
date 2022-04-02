@@ -5,30 +5,33 @@
 
 Console.Clear();
 
-string[] arry = { "abcd", "xyz", "tttt", "$$$", "1234", "@@@", "333", "1234", "111", "abcd", "137", "77", "187" };
+string[] frstArry = { "abcd", "xyz", "tttt", "$$$", "1234",
+                      "@@@", "333", "1234", "111", "abcd",
+                      "137", "77", "187" };
 int count = 0;
 int length = 0;
 
-foreach (string elmnt in arry)
+foreach (string elmnt in frstArry)
 {
     if (elmnt.Length <= 3)
-    length++;
+        length++;
 }
 
-string[] newArry = new string[length];
+string[] scndArry = new string[length];
 
-for (int j = 0; j < arry.Length; j++)
+for (int j = 0; j < frstArry.Length; j++)
 {
-    if (arry[j].Length <= 3)
+    if (frstArry[j].Length <= 3)
     {
-        newArry[count] = arry[j];
+        scndArry[count] = frstArry[j];
         count++;
         Console.Write($"\t{count - 1} ");
     }
 }
 
 Console.WriteLine();
-foreach (string elmnt in newArry)
+
+foreach (string elmnt in scndArry)
 {
     Console.Write($"\t{elmnt} ");
 }
