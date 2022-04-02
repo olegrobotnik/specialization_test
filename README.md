@@ -13,5 +13,5 @@ A user enters a text without line breaks via dialog in console. The program conv
 Next it finds out there how many strings smaller or equal to 3 symbols. Now we get the length of the second array there we will put all strings that satisfy the condition (string length <= 3). 
 Then it consistently assigns strings selected by condition to the elements of second string array. Then we get completely filled second array . Next program prints index of elements and value elements of the array in lower letters. The output performs in a table format.
 
-### **Flow-chart for the second solution (commit 553bdbd):**
+### **Flow-chart for the second solution (second_solution branch):**
 ![Flow-chart](flowchart2.png "Program 2 flow-chart")
