@@ -7,13 +7,14 @@ Console.Clear();
 
 char[] separators = new char[] { ' ', ';', '.', ',', '-', '<', '>',
                                 '"', ':', '!', '?', '=', '(', ')' };
+string[] convertedStringArry;
 string[] selectedStringArry;                                
 int length = 0;
 int count = 0;
 
 Console.Write("Enter a text that will be converted to string array: ");
 string? text = Console.ReadLine();
-string[] convertedStringArry = text!.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+convertedStringArry = text!.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
 for (int i = 0; i < convertedStringArry.Length; i++)
 {
