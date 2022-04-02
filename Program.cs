@@ -5,36 +5,33 @@
 
 Console.Clear();
 
-string[] frstArry = { "abcd", "xyz", "tttt", "$$$", "1234",
-                      "@@@", "333", "1234", "111", "abcd",
-                      "137", "77", "187" };
-string[] scndArry;
-int count = 0;
+char[] separators = new char[] { ' ', ';', '.', ',', '-', '<', '>',
+                                '"', ':', '!', '?', '=', '(', ')' };
+string[] selectedStringArry;                                
 int length = 0;
+int count = 0;
 
-foreach (string elmnt in frstArry)
+Console.Write("Enter a text that will be converted to string array: ");
+string? text = Console.ReadLine();
+string[] convertedStringArry = text!.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+
+for (int i = 0; i < convertedStringArry.Length; i++)
 {
-    if (elmnt.Length <= 3)
-        length++;
-}
-
-scndArry = new string[length];
-
-for (int j = 0; j < frstArry.Length; j++)
-{
-    if (frstArry[j].Length <= 3)
+    if (convertedStringArry[i].Length <= 3)
     {
-        scndArry[count] = frstArry[j];
-        Console.Write($"\t{count} ");
-        count++;   
+        length++;
     }
 }
 
+selectedStringArry = new string[length];
 Console.WriteLine();
 
-foreach (string elmnt in scndArry)
+for (int j = 0; j < convertedStringArry.Length; j++)
 {
-    Console.Write($"\t{elmnt} ");
+    if (convertedStringArry[j].Length <= 3)
+    {
+        selectedStringArry[count] = convertedStringArry[j];
+        Console.WriteLine("{0, 3}   | {1, 5}", count, selectedStringArry[count].ToLower());
+        count++;
+    }
 }
-
-Console.ReadLine();
